@@ -1,4 +1,11 @@
+import Header from './../components/Header'
+
 function HomePage(){
-  return <div>Welcome to Next.js</div>
+  return (
+    <>
+      <Header></Header>
+      <div>ホームだよ(´ . .̫ . `)</div>
+    </>
+  )
 }
 export default HomePage
