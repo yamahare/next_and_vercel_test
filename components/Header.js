@@ -6,6 +6,7 @@ function Header(){
       <ul>
         <li><Link href="/">ホーム</Link></li>
         <li><Link href="/about">アバウト</Link></li>
+        <li><Link href="/posts">ポスト</Link></li>
       </ul>
     </>
   )
