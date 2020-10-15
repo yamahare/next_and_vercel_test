@@ -1,13 +1,12 @@
+import Layout from './../components/Layout'
 import Button from './../components/Button'
-import Header from './../components/Header'
 
 function HomePage(){
   return (
-    <>
-      <Header></Header>
+    <Layout>
       <div>aboutだよおおおおおお</div>
       <Button></Button>
-    </>
+    </Layout>
   )
 }
 export default HomePage

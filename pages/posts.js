@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Post from '../components/Post'
-import Header from './../components/Header'
+import Layout from './../components/Layout'
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -26,11 +25,7 @@ function HomePage() {
   }, [])
 
   return (
-    <>
-      <Head>
-        <title>Next.js + Contentful</title>
-      </Head>
-      <Header></Header>
+    <Layout>
       <div class="posts">
         {posts.length > 0
           ? posts.map(p => (
@@ -45,7 +40,7 @@ function HomePage() {
             ))
           : null}
       </div>
-    </>
+    </Layout>
   )
 }
 
