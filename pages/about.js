@@ -1,6 +1,6 @@
 import useSWR from 'swr'
+import Layout from './../components/Layout'
 import Button from './../components/Button'
-import Header from './../components/Header'
 
 const fetcher = (url) => fetch(url).then((res)=>res.json())
 
@@ -9,15 +9,13 @@ function HomePage(){
   console.log(data)
 
   if (error) return <div>failed to load</div>
-  // if (!data) return <div>loading...</div>
 
   return (
-    <>
-      <Header></Header>
+    <Layout>
       <div>aboutだよおおおおおお</div>
       <Button></Button>
       <div>{data ? data.name : 'loading...'}</div>
-    </>
+    </Layout>
   )
 }
 

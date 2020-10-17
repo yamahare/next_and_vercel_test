@@ -1,11 +1,10 @@
-import Header from './../components/Header'
+import Layout from './../components/Layout'
 
 function HomePage(){
   return (
-    <>
-      <Header></Header>
+    <Layout>
       <div>ホームだよ(´ . .̫ . `)</div>
-    </>
+    </Layout>
   )
 }
 export default HomePage
