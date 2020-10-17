@@ -1,12 +1,12 @@
-import Link from 'next/link'
+import ActiveLink from './ActiveLink'
 
-function Header(){
+function Header({href, children}){
   return (
     <>
       <ul>
-        <li><Link href="/">ホーム</Link></li>
-        <li><Link href="/about">アバウト</Link></li>
-        <li><Link href="/posts">ポスト</Link></li>
+        <li><ActiveLink href="/">ホーム</ActiveLink></li>
+        <li><ActiveLink href="/about">アバウト</ActiveLink></li>
+        <li><ActiveLink href="/posts">ポスト</ActiveLink></li>
       </ul>
     </>
   )
