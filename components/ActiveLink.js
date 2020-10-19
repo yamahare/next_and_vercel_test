@@ -3,13 +3,11 @@ import { useRouter } from 'next/router'
 
 function ActiveLink({href, children}){
   const router = useRouter()
-  const style = {
-    color: router.pathname === href ? 'red' : 'black'
-  }
+  const classNames = router.pathname === href ? 'text-blue-500' : 'text-gray-500'
 
   return (
     <Link href={href} passHref>
-      <a style={style}>{children}</a>
+      <a className={classNames}>{children}</a>
     </Link>
   )
 }

@@ -1,42 +1,12 @@
 function Post({ alt, date, image, title, url }) {
   return (
-    <div className="postCards">
-      <div className="text">
-        <h2>{title}</h2>
+    <a className="max-w-sm rounded shadow-lg overflow-hidden" href={url}>
+      <img className="w-full" alt={alt} src={image} />
+      <div className="px-6 py-4">
+        <p className="font-bold text-xl mb-2">{title}</p>
         <h4>{date}</h4>
       </div>
-      <a href={url}>
-        <img alt={alt} src={image} />
-      </a>
-
-      <style jsx>{`
-        .postCards {
-          cursor: pointer;
-          height: 300px;
-          width: 300px;
-          margin: 16px;
-          border: 1px solid black;
-          border-radius: 16px;
-        }
-        .postCards:hover {
-          background-color: red;
-        }
-        .postCards img{
-          width: 150px;
-        }
-        a {
-          border-bottom: none;
-        }
-        a:hover {
-          border-bottom: none;
-        }
-        h2 {
-          color: black;
-          font-size: 24px;
-          margin-bottom: 0;
-        }
-      `}</style>
-    </div>
+    </a>
   )
 }
 

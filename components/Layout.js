@@ -8,7 +8,7 @@ function Layout({ children }){
         <title>すごいサイトだよ</title>
       </Head>
       <Header></Header>
-      <main>{ children }</main>
+      <main className="container mx-auto">{ children }</main>
     </>
   )
 }

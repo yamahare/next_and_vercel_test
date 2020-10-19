@@ -26,7 +26,7 @@ function HomePage() {
 
   return (
     <Layout>
-      <div class="posts">
+      <div class="flex flex-row flex-wrap mx-auto">
         {posts.length > 0
           ? posts.map(p => (
               <Post
