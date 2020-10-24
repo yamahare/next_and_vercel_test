@@ -14,7 +14,7 @@ function HomePage(){
 
   return (
     <Layout>
-      <div>ホームだよ(´ . .̫ . `)いえい</div>
+      <div>ホームだよ(´ . .̫ . `)</div>
       {data.length > 0 ? (
         data.map(d => (
           <div className="m-16" key={d.ref['@ref'].id}>
