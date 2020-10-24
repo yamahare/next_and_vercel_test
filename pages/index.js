@@ -17,13 +17,13 @@ function HomePage(){
       <div>ホームだよ(´ . .̫ . `)</div>
       {data.length > 0 ? (
         data.map(d => (
-          <TableRow
-            key={d.data.telephone}
-            creditCard={d.data.creditCard.number}
-            firstName={d.data.firstName}
-            lastName={d.data.lastName}
-            telephone={d.data.telephone}
-          />
+          <div className="m-16" key={d.ref['@ref'].id}>
+            <p>{d.data.telephone}</p>
+            <p>{d.data.creditCard.number}</p>
+            <p>{d.data.firstName}</p>
+            <p>{d.data.lastName}</p>
+            <p>{d.data.telephone}</p>
+          </div>
         ))
       ) : (
         <>
