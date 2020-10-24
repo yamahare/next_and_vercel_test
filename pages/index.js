@@ -18,11 +18,7 @@ function HomePage(){
       {data.length > 0 ? (
         data.map(d => (
           <div className="m-16" key={d.ref['@ref'].id}>
-            <p>{d.data.telephone}</p>
-            <p>{d.data.creditCard.number}</p>
-            <p>{d.data.firstName}</p>
-            <p>{d.data.lastName}</p>
-            <p>{d.data.telephone}</p>
+            <p>{d.data.title}</p>
           </div>
         ))
       ) : (

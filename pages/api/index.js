@@ -1,7 +1,8 @@
 const faunadb = require('faunadb')
 
 // your secret hash
-const secret = process.env.FAUNADB_SECRET_KEY
+// const secret = process.env.FAUNADB_SECRET_KEY
+const secret = process.env.FAUNADB_MYDB_KEY
 const q = faunadb.query
 const client = new faunadb.Client({ secret })
 
@@ -14,7 +15,7 @@ module.exports = async (req, res) => {
           // make paginatable
           q.Match(
             // query index
-            q.Index('all_customers') // specify source
+            q.Index('all_posts') // specify source
           )
         ),
         ref => q.Get(ref) // lookup each result by its reference
